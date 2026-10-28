@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -65,3 +66,288 @@ footer {
         padding: 25px 18px;
     }
 }
+
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.profile-photo {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 5px solid #f4d7e3;
+}
+
+.project {
+    background-color: #fff5f8;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid #f4d7e3;
+}
+
+button {
+    background-color: #9b426b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #753653;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #753653;
+    outline-offset: 3px;
+}
+
+#projectSearch {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #9b426b;
+    border-radius: 8px;
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.dark-mode {
+    background-color: #241d26;
+    color: #f8eaf0;
+}
+
+.dark-mode section {
+    background-color: #382b34;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: #ffd1e3;
+}
+
+.dark-mode .project {
+    background-color: #493848;
+    border-color: #705468;
+}
+
+.dark-mode a {
+    color: #ffd1e3;
+}
+
+@media (max-width: 600px) {
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    header {
+        padding: 12px;
+    }
+}
+
+.project-photo {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px auto;
+    border: 3px solid #f4d7e3;
+}
+
+#projectFilter {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 2px solid #f4d7e3;
+    border-radius: 8px;
+    background-color: white;
+    color: #382b34;
+    font-size: 16px;
+}
+
+#projectFilter:focus-visible {
+    outline: 3px solid #9b426b;
+    outline-offset: 2px;
+}
+
+.photo-modal[hidden] {
+    display: none;
+}
+
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 60px 15px 20px;
+}
+
+#largePhoto {
+    max-width: 75%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#closePhoto {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+}
+
+.photo-modal[hidden] {
+    display: none;
+}
+
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 60px 12px 20px;
+    z-index: 1000;
+}
+
+#largePhoto {
+    max-width: 75%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#closePhoto {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+}
+
+#prevPhoto,
+#nextPhoto {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.project-photo {
+    cursor: zoom-in;
+}
+
+@media (max-width: 600px) {
+    #largePhoto {
+        max-width: 65%;
+    }
+
+    .photo-modal {
+        gap: 5px;
+    }
+}
+
+nav a {
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+nav a.active {
+    background-color: #9b426b;
+    color: white;
+}
+
+nav a:focus-visible {
+    outline: 3px solid #9b426b;
+    outline-offset: 3px;
+}
+
+.dark-mode nav a.active {
+    background-color: #f4d7e3;
+    color: #382b34;
+}
+
+.dark-mode header {
+    background-color: #382b34;
+}
+
+.dark-mode header h1 {
+    color: #f4d7e3;
+}
+
+.dark-mode nav a {
+    color: #f4d7e3;
+}
+
+.dark-mode nav a:hover {
+    color: #ffffff;
+}
+
+.dark-mode nav a.active {
+    background-color: #f4d7e3;
+    color: #382b34;
+}
+
+
+/* My cute portfolio fonts */
+
+/* Normal text */
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
+/* My Portfolio heading - keep it curvy */
+header h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: 48px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Section headings - elegant italic */
+section h1,
+section h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+section h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Navigation, buttons and form fields */
+nav, button, input, select {
+    font-family: "Quicksand", sans-serif;
+}
+
+
+
